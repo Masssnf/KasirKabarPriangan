@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package KASIR;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;            
 
 /**
  *
@@ -65,6 +70,11 @@ public class FormLogin extends javax.swing.JFrame {
         });
 
         btnLogin.setText("LOGIN");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnDaftar.setText("REGISTER");
         btnDaftar.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +141,46 @@ public class FormLogin extends javax.swing.JFrame {
         new FormRegister().setVisible(true);
                 this.dispose();
     }//GEN-LAST:event_btnDaftarActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        String username = txtUsername.getText().trim();
+        String password = new String(txtPassword.getText()).trim();
+        if (username.isEmpty()|| password.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Username Dan Password Tidak Boleh Kosong!", "ERROR Validasi",JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        try{
+            Connection conn = Koneksi.getConnection();
+            String sql = "SELECT * FROM users WHERE username = ? AND password = ? ";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            
+            ps.setString(1, username); 
+            ps.setString(2, password);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()){
+                String role = rs.getString("role");
+                String name = rs.getString("name");
+                
+                System.out.println("Role Dari Database: " +role);
+                
+                JOptionPane.showMessageDialog(this, "Login Berhasil! Halo, " + name);
+                
+                if (role.equalsIgnoreCase("FO")){
+                    new FormIklan().setVisible(true);
+                    this.dispose();
+                    
+                } else if (role.equalsIgnoreCase("Sirkulasi"))
+                    new FormSirkulasi().setVisible(true);
+                    this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(this, "Role Tidak Dikenal ");
+            }                
+
+        }catch (Exception e){
+                JOptionPane.showMessageDialog(this, "Error Database: " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
