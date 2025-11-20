@@ -4,15 +4,20 @@
  * and open the template in the editor.
  */
 package KASIR;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
+import javax.swing.*;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
-
-import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,6 +35,7 @@ public class JenisIklan extends javax.swing.JFrame {
         initComponents();
         tampilkandata();
     }
+    
     
     public void tampilkandata() {
         DefaultTableModel tabeliklan = new DefaultTableModel();
@@ -191,8 +197,18 @@ public class JenisIklan extends javax.swing.JFrame {
         });
 
         btnEdit.setText("EDIT");
+        btnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditActionPerformed(evt);
+            }
+        });
 
         btnHapus.setText("HAPUS");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
 
         btnKembali.setText("KEMBALI");
         btnKembali.addActionListener(new java.awt.event.ActionListener() {
@@ -270,12 +286,12 @@ public class JenisIklan extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//TOMBOL KEMBALI
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         new FormIklan().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnKembaliActionPerformed
-
+//TOMBOL TAMBAH
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         String jenis_iklan = txtJenisIklan.getText();
         String harga_iklan = txtHargaIklan.getText();
@@ -311,7 +327,7 @@ public class JenisIklan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Gagal Memasukkan Data Jenis Iklan" + e.getMessage());
         };
     }//GEN-LAST:event_btnTambahActionPerformed
-
+//TAMPIL DATA KE TABEL
     private void tblJenisIklanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblJenisIklanMouseClicked
         int baris = tblJenisIklan.getSelectedRow();
         
@@ -323,9 +339,52 @@ public class JenisIklan extends javax.swing.JFrame {
         txtJenisIklan.setText(jenis_iklan);
         txtHargaIklan.setText(harga_iklan);
         txtMuat.setText(muat);
-        txtWarnaIklan.setText(harga_iklan);
+        txtWarnaIklan.setText(warna_iklan);
         
     }//GEN-LAST:event_tblJenisIklanMouseClicked
+//TOMBOL EDIT
+    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
+        try {
+            String sql = "UPDATE jnsIklan SET harga_iklan=?, muat=?, warna_iklan=? WHERE jenis_iklan=?";
+            Connection conn = Koneksi.getConnection();
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, txtHargaIklan.getText());
+            pst.setString(2, txtMuat.getText());
+            pst.setString(3, txtWarnaIklan.getText());
+            pst.setString(4, txtJenisIklan.getText());
+            
+            int updated = pst.executeUpdate();
+            
+            if (updated > 0) {
+                JOptionPane.showMessageDialog(null, "Data Telah Di Update");
+                tampilkandata();
+            } else {
+                JOptionPane.showMessageDialog(null, "Data Gagal Di Update");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnEditActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        try {
+            String sql = "DELETE FROM jnsIklan WHERE jenis_iklan = ?";
+            Connection conn = Koneksi.getConnection();
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, txtJenisIklan.getText());
+            int rowsAffected = pst.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                JOptionPane.showMessageDialog(null, "Data Telah Di Hapus");
+                tampilkandata();
+            } else {
+                JOptionPane.showMessageDialog(null, "Gagal Menghapus");
+            }
+                    
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error Menghapus: " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
      * @param args the command line arguments
