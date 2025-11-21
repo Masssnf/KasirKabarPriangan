@@ -30,17 +30,43 @@ public class FormIklan extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         addJenisIklan = new javax.swing.JMenuItem();
-        addJenisIklan1 = new javax.swing.JMenuItem();
-        addJenisIklan2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        addOtomotif = new javax.swing.JMenuItem();
+        addSales = new javax.swing.JMenuItem();
+        addKopIklan = new javax.swing.JMenuItem();
+        addKopKota = new javax.swing.JMenuItem();
+        addPemasang = new javax.swing.JMenuItem();
+        TransaksiIklan = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        MenuBtlIklan = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        MenuExit = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1320, 600));
+
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(80, 35));
 
         jMenu1.setText("Tabel");
+        jMenu1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jMenu1.setMargin(new java.awt.Insets(0, 10, 0, 0));
 
+        addJenisIklan.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addJenisIklan.setText("JENIS IKLAN");
+        addJenisIklan.setBorder(null);
+        addJenisIklan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addJenisIklan.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addJenisIklan.setIconTextGap(1);
         addJenisIklan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addJenisIklanActionPerformed(evt);
@@ -48,43 +74,177 @@ public class FormIklan extends javax.swing.JFrame {
         });
         jMenu1.add(addJenisIklan);
 
-        addJenisIklan1.setText("OTOMOTIF");
-        addJenisIklan1.addActionListener(new java.awt.event.ActionListener() {
+        addOtomotif.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addOtomotif.setText("OTOMOTIF");
+        addOtomotif.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addOtomotif.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addOtomotif.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addOtomotif.setIconTextGap(1);
+        addOtomotif.setMargin(new java.awt.Insets(1, 2, 2, 1));
+        addOtomotif.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJenisIklan1ActionPerformed(evt);
+                addOtomotifActionPerformed(evt);
             }
         });
-        jMenu1.add(addJenisIklan1);
+        jMenu1.add(addOtomotif);
 
-        addJenisIklan2.setText("AE/SALES");
-        addJenisIklan2.addActionListener(new java.awt.event.ActionListener() {
+        addSales.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addSales.setText("AE/SALES");
+        addSales.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addSales.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addSales.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addSales.setIconTextGap(1);
+        addSales.setMargin(new java.awt.Insets(1, 2, 2, 1));
+        addSales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJenisIklan2ActionPerformed(evt);
+                addSalesActionPerformed(evt);
             }
         });
-        jMenu1.add(addJenisIklan2);
+        jMenu1.add(addSales);
+
+        addKopIklan.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addKopIklan.setText("KOP IKLAN");
+        addKopIklan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addKopIklan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addKopIklan.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addKopIklan.setIconTextGap(1);
+        addKopIklan.setMargin(new java.awt.Insets(1, 2, 2, 1));
+        addKopIklan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addKopIklanActionPerformed(evt);
+            }
+        });
+        jMenu1.add(addKopIklan);
+
+        addKopKota.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addKopKota.setText("KOP KOTA");
+        addKopKota.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addKopKota.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addKopKota.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addKopKota.setIconTextGap(1);
+        addKopKota.setMargin(new java.awt.Insets(1, 2, 2, 1));
+        addKopKota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addKopKotaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(addKopKota);
+
+        addPemasang.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addPemasang.setText("PEMASANG");
+        addPemasang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        addPemasang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        addPemasang.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        addPemasang.setIconTextGap(1);
+        addPemasang.setMargin(new java.awt.Insets(1, 2, 2, 1));
+        addPemasang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPemasangActionPerformed(evt);
+            }
+        });
+        jMenu1.add(addPemasang);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
-
-        jMenuItem2.setText("exit");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+        TransaksiIklan.setText("Transaksi");
+        TransaksiIklan.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        TransaksiIklan.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        TransaksiIklan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TransaksiIklanMouseClicked(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
-
-        jMenuItem3.setText("exit");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        TransaksiIklan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                TransaksiIklanActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenuBar1.add(TransaksiIklan);
 
-        jMenuBar1.add(jMenu2);
+        jMenu3.setText("Cetak");
+        jMenu3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jMenu3.setMargin(new java.awt.Insets(0, 10, 0, 0));
+
+        jMenu6.setText("LAPORAN PENJUALAN");
+        jMenu6.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem1.setText("PER HARI/TANGGAL");
+        jMenu6.add(jMenuItem1);
+
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem2.setText("PER TANGGAL MUAT");
+        jMenu6.add(jMenuItem2);
+
+        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem3.setText("PER BULAN");
+        jMenu6.add(jMenuItem3);
+
+        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem4.setText("PEROLEHAN /SALES/TGL MUAT");
+        jMenu6.add(jMenuItem4);
+
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem5.setText("PEROLEHAN /SALES/TGL BULAN");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem5);
+
+        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem6.setText("REKAP SALES/TGL MUAT");
+        jMenu6.add(jMenuItem6);
+
+        jMenuItem7.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem7.setText("REKAP SALES/BULAN");
+        jMenu6.add(jMenuItem7);
+
+        jMenuItem8.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jMenuItem8.setText("KLASIFIKASI/BULAN");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem8);
+
+        jMenu3.add(jMenu6);
+
+        MenuBtlIklan.setText("PEMBATALAN IKLAN");
+        MenuBtlIklan.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        jMenu3.add(MenuBtlIklan);
+
+        jMenuItem9.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        jMenuItem9.setText("PEMUATAN IKLAN");
+        jMenu3.add(jMenuItem9);
+
+        jMenu5.setText("INTENSIF & KOMISI AE");
+        jMenu5.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        jMenu3.add(jMenu5);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("Fungsi");
+        jMenu4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jMenu4.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        jMenuBar1.add(jMenu4);
+
+        MenuExit.setText("Exit");
+        MenuExit.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        MenuExit.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        MenuExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuExitMouseClicked(evt);
+            }
+        });
+        MenuExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuExitActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(MenuExit);
 
         setJMenuBar(jMenuBar1);
 
@@ -92,14 +252,15 @@ public class FormIklan extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 832, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGap(0, 443, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJenisIklanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJenisIklanActionPerformed
@@ -107,31 +268,60 @@ public class FormIklan extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_addJenisIklanActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void addOtomotifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addOtomotifActionPerformed
+        new Otomotif().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addOtomotifActionPerformed
+
+    private void addSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSalesActionPerformed
+        new Sales().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addSalesActionPerformed
+
+    private void addKopIklanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addKopIklanActionPerformed
+        new KopIklan().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addKopIklanActionPerformed
+
+    private void addKopKotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addKopKotaActionPerformed
+        new KopKota().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addKopKotaActionPerformed
+
+    private void addPemasangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPemasangActionPerformed
+        new Pemasang().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addPemasangActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void MenuExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuExitActionPerformed
+
+    }//GEN-LAST:event_MenuExitActionPerformed
+
+    private void MenuExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuExitMouseClicked
         System.exit(0);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_MenuExitMouseClicked
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void TransaksiIklanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TransaksiIklanActionPerformed
+        new FormTransaksi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_TransaksiIklanActionPerformed
 
-    private void addJenisIklan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJenisIklan1ActionPerformed
+    private void TransaksiIklanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransaksiIklanMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_addJenisIklan1ActionPerformed
-
-    private void addJenisIklan2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJenisIklan2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addJenisIklan2ActionPerformed
+    }//GEN-LAST:event_TransaksiIklanMouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -148,8 +338,6 @@ public class FormIklan extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FormIklan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -159,13 +347,29 @@ public class FormIklan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu MenuBtlIklan;
+    private javax.swing.JMenu MenuExit;
+    private javax.swing.JMenu TransaksiIklan;
     private javax.swing.JMenuItem addJenisIklan;
-    private javax.swing.JMenuItem addJenisIklan1;
-    private javax.swing.JMenuItem addJenisIklan2;
+    private javax.swing.JMenuItem addKopIklan;
+    private javax.swing.JMenuItem addKopKota;
+    private javax.swing.JMenuItem addOtomotif;
+    private javax.swing.JMenuItem addPemasang;
+    private javax.swing.JMenuItem addSales;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }
