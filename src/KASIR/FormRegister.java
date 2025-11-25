@@ -48,6 +48,7 @@ public class FormRegister extends javax.swing.JFrame {
         jTextField6.setText("jTextField2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("REGISTER - KABAR PRIANGAN");
         setSize(new java.awt.Dimension(345, 470));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N

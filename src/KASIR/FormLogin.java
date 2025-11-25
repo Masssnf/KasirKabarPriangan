@@ -46,6 +46,7 @@ public class FormLogin extends javax.swing.JFrame {
         btnDaftar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("APLIKASI KASIR - KABAR PRIANGAN");
         setPreferredSize(new java.awt.Dimension(345, 469));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N

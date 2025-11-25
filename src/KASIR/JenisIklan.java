@@ -163,6 +163,7 @@ public class JenisIklan extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("JENIS IKLAN - KABAR PRIANGAN");
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("TABEL JENIS IKLAN");
@@ -200,6 +201,12 @@ public class JenisIklan extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel8.setText("WARNA IKLAN");
+
+        txtJenisIklan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtJenisIklanActionPerformed(evt);
+            }
+        });
 
         btnTambah.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnTambah.setText("TAMBAH");
@@ -278,9 +285,11 @@ public class JenisIklan extends javax.swing.JFrame {
                         .addGap(112, 112, 112)
                         .addComponent(jLabel1)
                         .addContainerGap(574, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 873, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -288,8 +297,7 @@ public class JenisIklan extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE))
+                                .addComponent(btnKembali, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))
                         .addGap(30, 30, 30))))
         );
         layout.setVerticalGroup(
@@ -333,11 +341,12 @@ public class JenisIklan extends javax.swing.JFrame {
                             .addComponent(jLabel11)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnEdit)
-                    .addComponent(btnTambah)
-                    .addComponent(btnHapus)
-                    .addComponent(btnKembali))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnTambah)
+                        .addComponent(btnHapus)
+                        .addComponent(btnKembali)))
                 .addGap(57, 57, 57))
         );
 
@@ -452,6 +461,10 @@ public class JenisIklan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error Menghapus: " + e.getMessage());
         }
     }//GEN-LAST:event_btnHapusActionPerformed
+
+    private void txtJenisIklanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJenisIklanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtJenisIklanActionPerformed
 
     /**
      * @param args the command line arguments

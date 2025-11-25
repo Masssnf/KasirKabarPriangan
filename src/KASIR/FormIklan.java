@@ -53,13 +53,14 @@ public class FormIklan extends javax.swing.JFrame {
         MenuExit = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("IKLAN - KABAR PRIANGAN");
         setPreferredSize(new java.awt.Dimension(1320, 600));
 
         jMenuBar1.setPreferredSize(new java.awt.Dimension(80, 35));
 
         jMenu1.setText("Tabel");
         jMenu1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jMenu1.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        jMenu1.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
         addJenisIklan.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addJenisIklan.setText("JENIS IKLAN");
@@ -148,7 +149,7 @@ public class FormIklan extends javax.swing.JFrame {
 
         TransaksiIklan.setText("Transaksi");
         TransaksiIklan.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        TransaksiIklan.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        TransaksiIklan.setMargin(new java.awt.Insets(0, 10, 0, 10));
         TransaksiIklan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TransaksiIklanMouseClicked(evt);
@@ -163,7 +164,7 @@ public class FormIklan extends javax.swing.JFrame {
 
         jMenu3.setText("Cetak");
         jMenu3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jMenu3.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        jMenu3.setMargin(new java.awt.Insets(0, 10, 0, 10));
 
         jMenu6.setText("LAPORAN PENJUALAN");
         jMenu6.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
@@ -228,12 +229,12 @@ public class FormIklan extends javax.swing.JFrame {
 
         jMenu4.setText("Fungsi");
         jMenu4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jMenu4.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        jMenu4.setMargin(new java.awt.Insets(0, 10, 0, 10));
         jMenuBar1.add(jMenu4);
 
-        MenuExit.setText("Exit");
+        MenuExit.setText("Selesai");
         MenuExit.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        MenuExit.setMargin(new java.awt.Insets(0, 10, 0, 0));
+        MenuExit.setMargin(new java.awt.Insets(0, 10, 0, 10));
         MenuExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MenuExitMouseClicked(evt);
@@ -315,7 +316,8 @@ public class FormIklan extends javax.swing.JFrame {
     }//GEN-LAST:event_TransaksiIklanActionPerformed
 
     private void TransaksiIklanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TransaksiIklanMouseClicked
-        // TODO add your handling code here:
+        new FormTransaksi().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_TransaksiIklanMouseClicked
 
     /**
